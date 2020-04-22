@@ -1,0 +1,424 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+/*============ REUSABLE COMPONENTS ==========*/
+
+.btn1 {
+    padding: 7px 20px;
+    background: #05bd1dd3;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #05bd1dd3;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.btn1:hover {
+    background: gold;
+    transition: 0.5s;
+    color: #000;
+    border: 1px solid gold;
+}
+
+.homepage-text {
+    margin: auto;
+    text-align: justify;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 20px;
+}
+
+.icons {
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: #05bd1dd3;
+}
+
+.grid {
+    padding: 20px 100px;
+}
+
+@media (max-width: 625px) {
+    .grid {
+        padding: 20px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 625px) {
+    .homepage-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 766px) {
+    .last {
+        margin-top: 50px;
+    }
+}
+
+
+.section {
+    background-color: #93ffc011;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/*========= HEADER SECTION =======*/
+header {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 0 100px;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/woman-wearing-mask-in-supermarket-3962286.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 90vh;
+}
+
+@media (max-width: 575px) {
+    .hero-section {
+        height: 60vh;
+    }
+}
+
+.hero-text {
+    padding-top: 350px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+@media (max-width: 575px) {
+    .hero-text {
+        padding-top: 250px;
+        font-size: 30px;
+    }
+}
+
+
+/*========= NAVIGATION ==========*/
+header .logo {
+    color: #fff;
+    line-height: 50px;
+    font-size: 24px;
+    width: 300px;
+    height: 200%;
+    float: left;
+    font-weight: bold;
+    margin-top: 30px; 
+}
+
+@media (max-width: 1065px) {
+    header .logo {
+        height: 75%;
+        width: 200px;
+    }
+}
+
+header nav {
+    float: right;
+    padding: 0;
+    display: flex;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    position: relative;
+}
+
+header nav ul li:hover ul {
+    display: block;
+    background-color: #05bd1dd3;
+ }
+
+ header nav ul li ul:hover {
+    display: block;
+    background-color: #05bd1dd3;
+    transition: 1.8s;
+ }
+
+header nav ul li ul {
+    padding: 5px 5px;
+    margin-top: 10px;
+   display: none;
+   background-color: #05bd1dd3;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
+    display: block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #fff;
+    background: #05bd1dd3;
+}
+
+.menu-toggle {
+    line-height: 50px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    float: right;
+}
+
+@media (max-width: 1065px) {
+    
+    header {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-top: 20px;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: rgb(2, 45, 48);
+        top: 70px;
+        left: -100%;
+        transition: 0.5s;
+        z-index: 100;
+    }
+
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        border-bottom: 0.5px solid #d1ce0bee;
+    }
+}
+
+.dropdown {
+    float: right;
+    margin-top: 2px;
+    color: #fff;
+}
+
+
+
+
+/*========== SOCIAL MEDIA LINKS ==========*/
+
+.social-media-links {
+    position: fixed;
+    display:block;
+    background-color: gold;
+    color: #000;
+    /* position: absolute; */
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    z-index: 3;
+}
+
+
+/*======= Section statement ========*/
+.intro-section-headings {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 100px;
+    color: #05bd1dd3;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.intro-text {
+    font-size: 50px;
+}
+
+@media (max-width: 625px) {
+    .intro-section-headings {
+        margin-top: 100px;
+    }
+}
+
+/*============ Carousel Section ===========*/
+
+.container-fluid {
+    margin-top: 3%;
+}
+
+
+/*========= Form Section ========*/
+
+.get-in-touch {
+    color: #05bd1dd3;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 600;
+    margin-bottom: 40px;
+    margin-top: 80px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.form-header {
+    background-color: rgb(255, 217, 0);
+    border-bottom: #f0f0f0;
+    padding: 20px 40px;
+}
+
+.form-header h2 {
+    margin: 0;
+}
+
+form {
+    padding: 30px 40px;
+}
+
+.control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.control.success input {
+    border-color: #2ecc71;
+}
+
+.control.error input {
+    border-color: #e74c3c;
+}
+
+.control input {
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.control i {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.control.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+
+/*Footer styling*/
+
+.page-footer {
+    margin-top: 15%;
+    background-image: -webkit-linear-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #029797));
+    background-image: -webkit-linear-gradient(135deg, #079286, #02974c);
+    background-image: -moz-linear-gradient(45deg, #079286, #02974c);
+    background-image: -ms-linear-gradient(45deg,0, #079286, #02974c 100%);
+    background-image: -o-linear-gradient(45deg, #079286, #02974c);
+    background-image: linear-gradient(135deg, #079286, #02974c);
+    color: #fff;
+}
+
+.strong {
+    color: gold;
+    text-decoration: none;
+}
+
+.footer-links {
+    background-color: gold;
+    padding: 10px 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    color: #000;
+}
+
+.footer-links:hover {
+    color: #05bd1dd3
+}
+/*============= Canvas section for footer styling ============*/
